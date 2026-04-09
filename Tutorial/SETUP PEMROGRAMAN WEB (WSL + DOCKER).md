@@ -96,8 +96,13 @@ apt install jq -y
 
 ## 💻 5. Setup ZSH (Optional biar Ganteng)
 
+### ZSH
 ```bash
 apt install zsh -y
+```
+
+### oh my Zsh
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -211,7 +216,7 @@ atau
 ```sh
 ./start.sh crkosongdua
 ```
-
+ini disesuaikan sesuai kelas masing-masing, bisa ***crkosongsatu*** atau ***crkosongdua***
 **⚠️ Troubleshooting**
 ❌ mkcert tidak ditemukan
 
@@ -221,19 +226,16 @@ mkcert -install
 ```
 
 ❌ Permission denied (publickey)
-
 ```sh
 SSH belum dikonfigurasi dengan benar
 ```
 
 ❌ Docker build lama
-
 ```sh
 Normal (5–20 menit)
 ```
 
 ❌ Docker tidak jalan
-
 ```sh
 Pastikan Docker Desktop aktif
 ```
@@ -290,3 +292,4 @@ _Folder Fungsi_
 cd /root/perkuliahan/crkosongdua
 code .
 ```
+pastikan extension untuk WSL sudah dipasang di VSCode kamu!!!
