@@ -5,11 +5,29 @@
 Tutorial ini menjelaskan langkah-langkah setup environment Web Development menggunakan:
 
 - WSL (Linux di Windows)
+- Visual Studio Code System
 - Docker (Container)
 - GitHub (Version Control)
 - Laravel (Framework PHP)
 
 ---
+
+## 🚫 PERINGATAN!!!
+
+- Jangan pakai jaringan Esa Unggul (Wifi/LAN)
+- Pastikan Jaringan kamu stabil dan tidak LAG
+- Siapkan Kuota yang banyak karena akan download banyak hal
+- Sudah menginstall Visual Studio Code System, Docker, Navicat v17 dari Djambred
+
+## 🌐 TOOLS PERKULIAHAN
+1. WSL
+2. Docker (https://www.docker.com)
+3. Navicat (https://shared.djncloud.my.id/tools_tempur/)
+4. VSCode (https://code.visualstudio.com/download)
+5. Github (https://github.com)
+6. VPS (sewa 3 bulan)
+7. Domain (sewa 1 tahun)
+8. Cloudflared (https://www.cloudflare.com)
 
 ## 🧩 1. Install WSL
 
