@@ -1,4 +1,4 @@
-# 📘 SETUP PEMROGRAMAN WEB (WSL + DOCKER + LARAVEL)
+# 📘 SETUP PEMROGRAMAN WEB 2026 (WSL + GITHUB + DOCKER)
 
 ## 🚀 Deskripsi
 
@@ -22,10 +22,9 @@ Tutorial ini menjelaskan langkah-langkah setup environment Web Development mengg
    - Windows Subsystem for Linux
 4. Restart komputer
 
-### Install Ubuntu & Terminal
+### Install Ubuntu
 
 - Install Ubuntu dari Microsoft Store
-- Install Windows Terminal
 
 ---
 
@@ -48,7 +47,7 @@ nano /etc/wsl.conf
 ```
 nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 
-**Isi konfigurasi (copy kedalamnya):**
+**Isi konfigurasi (copy semua dan masukkan kedalamnya):**
 
 ```bash
 [automount]
@@ -73,8 +72,8 @@ default=root
 command=service docker start
 ```
 
-Restart WSL:
-
+**Restart WSL:**
+Jalankan ini di PowerShell, jangan di WSL!!!
 ```sh
 wsl --shutdown
 ```
@@ -131,7 +130,7 @@ Menjadi:
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 ```
 
-Reload:
+**Reload:**
 
 ```sh
 source ~/.zshrc
@@ -188,13 +187,13 @@ Centang:
 - user
 - delete_repo
 
-Simpan ke file:
+**Simpan ke file:**
 
 ```sh
 nano .github-token
 nano .github-user
 ```
-Isi:
+**Isi:**
 
 ```sh
 .github-token → token
@@ -217,6 +216,7 @@ atau
 ./start.sh crkosongdua
 ```
 ini disesuaikan sesuai kelas masing-masing, bisa ***crkosongsatu*** atau ***crkosongdua***
+
 **⚠️ Troubleshooting**
 ❌ mkcert tidak ditemukan
 
@@ -266,12 +266,13 @@ _Command Fungsi_
 
 ## 🌐 12. Akses Project
 
-Buka di browser:
+Buka di browser untuk tes:
 
 ```sh
 crkosongdua.test / crkosongsatu.test
 ```
-
+Jika Keluar halaman Laravel, berarti BERHASIL
+Jika tidak, cek ulang siapa tau ada kesalahan (kalo bingung tanya AI)
 ---
 
 ## 📂 13. Struktur Project
@@ -292,4 +293,4 @@ _Folder Fungsi_
 cd /root/perkuliahan/crkosongdua
 code .
 ```
-pastikan extension untuk WSL sudah dipasang di VSCode kamu!!!
+_pastikan extension untuk WSL sudah dipasang di VSCode kamu!!!_
