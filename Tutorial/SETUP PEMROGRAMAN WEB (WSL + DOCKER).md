@@ -29,6 +29,10 @@ Tutorial ini menjelaskan langkah-langkah setup environment Web Development mengg
 7. Domain (sewa 1 tahun)
 8. Cloudflared (https://www.cloudflare.com)
 
+---
+kalo sudah SIAP, kita gass lanjut ke tahapannya hehe
+---
+
 ## 🧩 1. Install WSL
 
 ### Langkah:
