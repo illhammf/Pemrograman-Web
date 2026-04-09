@@ -35,7 +35,6 @@ Buka PowerShell (Run as Administrator):
 
 ```sh
 wsl --set-default-version 2
-ubuntu config --default-user root
 ```
 
 ---
@@ -47,6 +46,7 @@ ubuntu config --default-user root
 ```sh
 nano /etc/wsl.conf
 ```
+nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 
 **Isi konfigurasi (copy kedalamnya):**
 
@@ -94,7 +94,7 @@ apt install jq -y
 
 ---
 
-## 💻 5. Setup ZSH (Optional)
+## 💻 5. Setup ZSH (Optional biar Ganteng)
 
 ```bash
 apt install zsh -y
@@ -186,15 +186,14 @@ Centang:
 Simpan ke file:
 
 ```sh
-touch .github-token
-touch .github-user
+nano .github-token
+nano .github-user
 ```
-
 Isi:
 
 ```sh
 .github-token → token
-.github-user → username GitHub
+.github-user → username GitHub kamu
 ```
 
 **⚠️ Jangan upload file ini ke GitHub!**
