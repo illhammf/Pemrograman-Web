@@ -72,6 +72,21 @@ nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 **Isi konfigurasi (copy semua dan masukkan kedalamnya):**
 
 ```bash
+[network]
+generateResolvConf = false
+
+[boot]
+systemd=true
+
+[user]
+default=root
+
+# Automatically mount Windows drive when the distribution is launched
+[automount]
+
+# Set to true will automount fixed drives (C:/ or D:/) with DrvFs under the root directory set above. Set to false means dr>
+enabled=true
+
 # Sets the directory where fixed drives will be automatically mounted. This example changes the mount location, so your C-d>
 root = /
 
