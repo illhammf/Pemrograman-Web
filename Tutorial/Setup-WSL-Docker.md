@@ -131,6 +131,9 @@ command=service docker start
 
 ```
 
+atau bisa didapatkan dari: https://learn.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig
+cari Example wsl.conf file
+
 **lalu Restart WSL:**
 Jalankan ini di PowerShell, jangan di WSL!!!
 ```sh
