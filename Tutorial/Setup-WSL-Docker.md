@@ -135,8 +135,10 @@ atau bisa didapatkan dari: https://learn.microsoft.com/en-us/windows/wsl/wsl-con
 
 cari **Example wsl.conf file**
 
+
 **lalu Restart WSL:**
-Jalankan ini di PowerShell, jangan di WSL!!!
+Jalankan ini di PowerShell, **jangan di WSL!!!**
+
 ```sh
 wsl --shutdown
 ```
