@@ -1,8 +1,8 @@
 # 📘 SETUP PEMROGRAMAN WEB 2026 (WSL + GITHUB + DOCKER)
-
+---
 ## 🚀 Deskripsi
 
-Tutorial ini menjelaskan langkah-langkah setup environment Web Development menggunakan:
+Tutorial ini menjelaskan langkah-langkah setup environment Mata Kuliah Web Development menggunakan:
 
 - WSL (Linux di Windows)
 - Visual Studio Code System
@@ -46,7 +46,7 @@ kalo sudah SIAP, kita gass lanjut ke tahapannya hehe
 
 ### Install Ubuntu
 
-- Install Ubuntu dari Microsoft Store
+- **Install Ubuntu dari Microsoft Store**
 
 ---
 
@@ -288,7 +288,7 @@ _Command Fungsi_
 
 ## 🌐 12. Akses Project
 
-Buka di browser untuk tes:
+Buka di ini browser untuk tes:
 
 ```sh
 crkosongdua.test / crkosongsatu.test
