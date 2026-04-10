@@ -132,7 +132,8 @@ command=service docker start
 ```
 
 atau bisa didapatkan dari: https://learn.microsoft.com/en-us/windows/wsl/wsl-config#configure-global-options-with-wslconfig
-cari Example wsl.conf file
+
+cari **Example wsl.conf file**
 
 **lalu Restart WSL:**
 Jalankan ini di PowerShell, jangan di WSL!!!
@@ -216,11 +217,13 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 Tambahkan ke GitHub:
+_Login Github dulu_
 
 Klik
 **Settings → SSH Keys → Add New Key**
+masukkan SSH key nya
 
-Test koneksi:
+**Test koneksi:**
 
 ```sh
 ssh -T git@github.com
@@ -245,15 +248,18 @@ cd boilerplate
 Buka:
 https://github.com/settings/tokens
 
-Buat:
+atau klik
+Settings - Developer Settings - Personal Access Tokens - Tokens (classic)
+
+Buat Token Baru (Generate new token):
 
 ```sh
 Token Classic
-No expiration
+kasih nama INITSCRIPT
+No expiration (tidak ada kadaluarsa)
 ```
 
-Centang:
-
+Lalu Centang:
 - repo
 - user
 - delete_repo
