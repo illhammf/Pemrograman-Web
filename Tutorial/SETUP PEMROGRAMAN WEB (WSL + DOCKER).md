@@ -72,26 +72,34 @@ nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 **Isi konfigurasi (copy semua dan masukkan kedalamnya):**
 
 ```bash
-[automount]
-enabled=true
-root=/
-options="metadata,umask=22,fmask=11"
+# Sets the directory where fixed drives will be automatically mounted. This example changes the mount location, so your C-d>
+root = /
+
+# DrvFs-specific options can be specified.
+options = "metadata,uid=1003,gid=1003,umask=077,fmask=11,case=off"
+
+# Sets the `/etc/fstab` file to be processed when a WSL distribution is launched.
 mountFsTab=true
 
+# Network host settings that enable the DNS server used by WSL 2. This example changes the hostname, sets generateHosts to >
 [network]
 hostname=DemoHost
 generateHosts=false
 generateResolvConf=false
 
+# Set whether WSL supports interop processes like launching Windows apps and adding path variables. Setting these to false >
 [interop]
 enabled=false
 appendWindowsPath=false
 
+# Set the user when launching a distribution with WSL.
 [user]
-default=root
+default=DemoUser
 
+# Set a command to run when a new WSL instance launches. This example starts the Docker container service.
 [boot]
 command=service docker start
+
 ```
 
 **Restart WSL:**
