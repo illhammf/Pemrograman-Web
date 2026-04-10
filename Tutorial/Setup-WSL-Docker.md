@@ -423,10 +423,10 @@ _Command Fungsi_
 
 _Folder Fungsi_
 
-- src Laravel
-- nginx Web server
-- php PHP config
-- db Database
+- src : Laravel
+- nginx : Web server
+- php PHP : config
+- db : Database
 - docker-compose.yml Docker config
 
 ---
