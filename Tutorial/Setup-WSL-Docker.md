@@ -342,26 +342,30 @@ source /root/.zshrc
 ```
 
  ### Gas kita tes 
+ 
 coba **docker compose up**
 ```sh
 dcu
 ```
+
 jika hasilnya:
 [+] up 4/4
  ✔ Network crkosongdua_default Created                                                                                 0.2ss
  ✔ Container crkosongdua_db    Healthy                                                                                 12.6s
  ✔ Container crkosongdua_php   Started                                                                                 12.5s
  ✔ Container crkosongdua_nginx Started                                                                                 12.7s
-
+ 
 berarti sukses dan coba **tes di web browser** masukkan:
 
 ```sh
 crkosongdua.test / crkosongsatu.test
 ```
+
 Jika Keluar halaman Laravel, berarti BERHASIL
 Jika tidak, cek ulang siapa tau ada kesalahan (kalo bingung tanya AI)
 
 untuk menghentikan tinggal di **compose down**
+
 ```sh
 dcd
 ```
