@@ -3,4 +3,4 @@ Tahapan Menyiapkan Tools untuk PemWeb dan Mata kuliah lainnya yang berhubungan d
 
 ## 📁 Tutorial
 Klik untuk masuk ke folder tutorial:
-👉 [Klik di sini](./Tutorial/SETUP PEMROGRAMAN WEB (WSL + DOCKER).md)
+👉 [Klik di sini](./Tutorial/Setup-WSL-Docker.md)
