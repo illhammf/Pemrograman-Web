@@ -414,3 +414,5 @@ _Folder Fungsi_
 - docker-compose.yml Docker config
 
 ---
+
+(path/to/Semangat.png)
