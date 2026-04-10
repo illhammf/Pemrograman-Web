@@ -6,6 +6,9 @@ Tolong dibaca dengan cermat dan teliti agar tidak terjadi kesalahan dalam Instal
 Jangan terlalu terburu-buru dan silahkan ikutin tahapannya.
 Semangattt!
 
+
+![Semangat](Semangat.png)
+
 ---
 
 ## 🚀 Deskripsi
@@ -414,5 +417,3 @@ _Folder Fungsi_
 - docker-compose.yml Docker config
 
 ---
-
-(path/to/Semangat.png)
