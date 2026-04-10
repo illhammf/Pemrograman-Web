@@ -1,5 +1,13 @@
 # 📘 SETUP PEMROGRAMAN WEB 2026 (WSL + GITHUB + DOCKER)
+
 ---
+
+Tolong dibaca dengan cermat dan teliti agar tidak terjadi kesalahan dalam Instalasi/Setup.
+Jangan terlalu terburu-buru dan silahkan ikutin tahapannya.
+Semangattt!
+
+---
+
 ## 🚀 Deskripsi
 
 Tutorial ini menjelaskan langkah-langkah setup environment Mata Kuliah Web Development menggunakan:
@@ -12,7 +20,7 @@ Tutorial ini menjelaskan langkah-langkah setup environment Mata Kuliah Web Devel
 
 ---
 
-## 🚫 PERINGATAN!!!
+## 🚫 PERINGATAN WAJIB BACA!!!
 
 - Jangan pakai jaringan Esa Unggul (Wifi/LAN)
 - Pastikan Jaringan kamu stabil dan tidak LAG
@@ -30,7 +38,9 @@ Tutorial ini menjelaskan langkah-langkah setup environment Mata Kuliah Web Devel
 8. Cloudflared (https://www.cloudflare.com)
 
 ---
-kalo sudah SIAP, kita gass lanjut ke tahapannya hehe
+
+kalo sudah SIAP, kita gass lanjut ke tahapannya hehe 😁
+
 ---
 
 ## 🧩 1. Install WSL
@@ -52,7 +62,7 @@ kalo sudah SIAP, kita gass lanjut ke tahapannya hehe
 
 ## ⚙️ 2. Set WSL ke WSL2 & ROOT
 
-Buka PowerShell (Run as Administrator):
+Buka **PowerShell** (Run as Administrator):
 
 ```sh
 wsl --set-default-version 2
@@ -67,6 +77,7 @@ wsl --set-default-version 2
 ```sh
 nano /etc/wsl.conf
 ```
+
 nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 
 **Isi konfigurasi (copy semua dan masukkan kedalamnya):**
@@ -117,7 +128,7 @@ command=service docker start
 
 ```
 
-**Restart WSL:**
+**lalu Restart WSL:**
 Jalankan ini di PowerShell, jangan di WSL!!!
 ```sh
 wsl --shutdown
@@ -127,6 +138,10 @@ wsl --shutdown
 
 ## 📦 4. Install Dependencies
 
+### Buka WSL lagi
+
+jalankan:
+_bisa langsung semua ataupun satu per satu_
 ```bash
 apt update && apt upgrade -y
 apt install git -y
@@ -163,7 +178,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugi
 nano ~/.zshrc
 ```
 
-Ubah:
+**Cari dan ubah Ubah:**
 
 ```sh
 plugins=(git)
@@ -185,6 +200,8 @@ source ~/.zshrc
 
 ## 🔐 6. Setup GitHub SSH
 
+Jalankan:
+_bisa langsung semua ataupun satu per satu_
 ```bash
 ssh-keygen -t rsa -b 4096 -C "emailkamu@gmail.com"
 eval "$(ssh-agent -s)"
@@ -194,6 +211,7 @@ cat ~/.ssh/id_rsa.pub
 
 Tambahkan ke GitHub:
 
+Klik
 **Settings → SSH Keys → Add New Key**
 
 Test koneksi:
@@ -201,6 +219,8 @@ Test koneksi:
 ```sh
 ssh -T git@github.com
 ```
+
+Kalo sudah muncul Hi (username Github Kamu), berarti sudah Berhasil dan gas lanjut
 
 ---
 
@@ -234,6 +254,7 @@ Centang:
 
 **Simpan ke file:**
 
+_Jalankan ini satu-satu_
 ```sh
 nano .github-token
 nano .github-user
@@ -251,19 +272,25 @@ nano .github-user
 
 ## 🚀 9. Jalankan Project
 
+masuk ke dalam Boilerplate
+```sh
+cd boilerplate
+```
+
+lalu lanjut
 ```bash
 ./start.sh pemweb
 ```
 
-atau
+lanjut
 
 ```sh
 ./start.sh crkosongdua
 ```
 ini disesuaikan sesuai kelas masing-masing, bisa ***crkosongsatu*** atau ***crkosongdua***
 
-**⚠️ Troubleshooting**
-❌ mkcert tidak ditemukan
+**⚠️ Troubleshooting / Kalo terjadi Error**
+❌ mkcert tidak ditemukan (install dulu)
 
 ```sh
 apt install mkcert -y
@@ -277,50 +304,106 @@ SSH belum dikonfigurasi dengan benar
 
 ❌ Docker build lama
 ```sh
-Normal (5–20 menit)
+ditunggu aja, Normalnya (5–20 menit)
 ```
 
 ❌ Docker tidak jalan
 ```sh
-Pastikan Docker Desktop aktif
+Pastikan Docker Desktop aktif!
 ```
 
 ---
 
-## 🔄 10. Reload Environment
+## 🚦 10. Masuk ke filenya
+
+```sh
+cd /root/perkuliahan/crkosongdua
+```
+_pastikan kelasnya sesuai kelas masing-masing_
+
+---
+
+## 🔄 11. Reload Environment
 
 ```sh
 source /root/.zshrc
 ```
 
----
-
-## ⚡ 11. Command Shortcut
-
-_Command Fungsi_
-
-```bash
-- dcu	docker-compose up -d
-- dcd	docker-compose down
-- dci	init project
-- dcp	git add + commit + push
-- dca	php artisan
+ ### Gas kita tes 
+coba **docker compose up**
+```sh
+dcu
 ```
+jika hasilnya:
+[+] up 4/4
+ ✔ Network crkosongdua_default Created                                                                                 0.2ss
+ ✔ Container crkosongdua_db    Healthy                                                                                 12.6s
+ ✔ Container crkosongdua_php   Started                                                                                 12.5s
+ ✔ Container crkosongdua_nginx Started                                                                                 12.7s
 
----
-
-## 🌐 12. Akses Project
-
-Buka di ini browser untuk tes:
+berarti sukses dan coba **tes di web browser** masukkan:
 
 ```sh
 crkosongdua.test / crkosongsatu.test
 ```
 Jika Keluar halaman Laravel, berarti BERHASIL
 Jika tidak, cek ulang siapa tau ada kesalahan (kalo bingung tanya AI)
+
+untuk menghentikan tinggal di **compose down**
+```sh
+dcd
+```
+
+dan hasilnya akan:
+[+] down 4/4
+ ✔ Container crkosongdua_nginx Removed                                                                                  0.6s
+ ✔ Container crkosongdua_php   Removed                                                                                  0.5s
+ ✔ Container crkosongdua_db    Removed                                                                                  1.0s
+ ✔ Network crkosongdua_default Removed                                                                                  0.3s
+
 ---
 
-## 📂 13. Struktur Project
+## 💻 12. Buka di VS Code
+
+Ketik ini di Terminal VS Code atau lanjutin di WSL tadi juga gapapa:
+
+```sh
+cd /root/perkuliahan/crkosongdua
+```
+
+lalu
+
+```sh
+code .
+```
+
+nanti akan otomastis masuk ke **Visual Studio Code**, dan sedang membuat Folder kelas masing-masing
+_pastikan extension untuk WSL sudah dipasang di VSCode kamu!!!_
+
+---
+
+Kalo sudah sampai tahap itu, Mantapp kamu sudah selesai Set-up nya :), tinggal praktikum
+tanggal 13 April 2026 🤩
+
+---
+
+Penjelasan Tambahan:
+
+## ⚡ 13. Command Shortcut
+
+_Command Fungsi_
+
+```bash
+- dcu :	docker-compose up -d
+- dcd :	docker-compose down
+- dci :	init project
+- dcp :	git add + commit + push
+- dca :	php artisan
+```
+
+---
+
+## 📂 14. Struktur Project
 
 _Folder Fungsi_
 
@@ -331,11 +414,3 @@ _Folder Fungsi_
 - docker-compose.yml Docker config
 
 ---
-
-## 💻 14. Buka di VS Code
-
-```sh
-cd /root/perkuliahan/crkosongdua
-code .
-```
-_pastikan extension untuk WSL sudah dipasang di VSCode kamu!!!_
