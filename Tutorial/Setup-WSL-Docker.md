@@ -109,8 +109,8 @@ generateResolvConf=false
 
 # Set whether WSL supports interop processes like launching Windows apps and adding path variables. Setting these to false >
 [interop]
-enabled=false
-appendWindowsPath=false
+enabled=true
+appendWindowsPath=true
 
 # Set the user when launching a distribution with WSL.
 [user]
