@@ -86,15 +86,6 @@ nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 **Isi konfigurasi (copy semua dan masukkan kedalamnya):**
 
 ```bash
-[network]
-generateResolvConf = false
-
-[boot]
-systemd=true
-
-[user]
-default=root
-
 # Automatically mount Windows drive when the distribution is launched
 [automount]
 
@@ -322,6 +313,67 @@ ditunggu aja, Normalnya (5–20 menit)
 ❌ Docker tidak jalan
 ```sh
 Pastikan Docker Desktop aktif!
+```
+
+❌ Code tidak ditemukan
+Jalankan ini
+```sh
+ls / | grep -E '^c$|^d$'
+```
+
+Kalau muncul c, lanjut:
+```sh
+ls "/c/Program Files"
+```
+
+Terus cari VS Code:
+```sh
+ls "/c/Program Files" | grep -i "code\|vs"
+```
+
+Lalu cari executable-nya:
+```sh
+find "/c/Program Files" -maxdepth 3 \( -iname "code" -o -iname "code.cmd" -o -iname "Code.exe" \) 2>/dev/null
+```
+
+Karena cmd.exe juga nggak kebaca dari PATH, coba panggil langsung pakai absolute path:
+```sh
+"/c/Windows/System32/cmd.exe" /c "where code"
+```
+
+Kalau itu juga gagal, cek dulu apakah folder Windows-nya ada:
+```sh
+ls "/c/Windows/System32/cmd.exe"
+```
+Kalau file itu ada, berarti interop Windows ada, cuma PATH-nya belum kebaca.
+
+Kalau hasil find nanti misalnya ketemu seperti ini:
+```sh
+/c/Program Files/VSCode-win32-x64-1.112.0/bin/code
+```
+atau:
+```sh
+/c/Program Files/Microsoft VS Code/bin/code
+```
+maka isi .zshrc harus pakai /c/..., bukan /mnt/c/...
+
+Contohnya:
+```sh
+export PATH=$PATH:'/c/Program Files/VSCode-win32-x64-1.112.0/bin'
+```
+
+Lalu reload:
+```sh
+source ~/.zshrc
+hash -r
+which code
+code .
+```
+
+nanti hasil diatas dimasukkan ke dalam nano ~/.zshrc
+contoh punyaku:
+```sh
+export PATH="$PATH:/c/Program Files/VSCode-win32-x64-1.112.0/bin"
 ```
 
 ---
