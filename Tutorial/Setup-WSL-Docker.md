@@ -1,4 +1,4 @@
-# 📘 SETUP PEMROGRAMAN WEB 2026 (WSL + GITHUB + DOCKER)
+# SETUP PEMROGRAMAN WEB 2026 (WSL + GITHUB + DOCKER)
 
 ---
 
@@ -11,7 +11,7 @@ Semangattt!
 
 ---
 
-## 🚀 Deskripsi
+## Deskripsi
 
 Tutorial ini menjelaskan langkah-langkah setup environment Mata Kuliah Web Development menggunakan:
 
@@ -46,7 +46,7 @@ kalo sudah SIAP, kita gass lanjut ke tahapannya hehe 😁
 
 ---
 
-## 🧩 1. Install WSL
+## 1. Install WSL
 
 ### Langkah:
 
@@ -63,7 +63,7 @@ kalo sudah SIAP, kita gass lanjut ke tahapannya hehe 😁
 
 ---
 
-## ⚙️ 2. Set WSL ke WSL2 & ROOT
+## 2. Set WSL ke WSL2 & ROOT
 
 Buka **PowerShell** (Run as Administrator):
 
@@ -73,7 +73,7 @@ wsl --set-default-version 2
 
 ---
 
-## 🔧 3. Konfigurasi WSL (WAJIB)
+## 3. Konfigurasi WSL (WAJIB)
 
 **Edit file:**
 
@@ -86,40 +86,27 @@ nanti sekalian ganti jika kamu masih **user**, ganti jadi **root**
 **Isi konfigurasi (copy semua dan masukkan kedalamnya):**
 
 ```bash
-# Automatically mount Windows drive when the distribution is launched
+[network]
+generateResolvConf=false
+generateHosts=false
+hostname=DemoHost
+
+[boot]
+systemd=true
+command=service docker start
+
+[user]
+default=root
+
 [automount]
-
-# Set to true will automount fixed drives (C:/ or D:/) with DrvFs under the root directory set above. Set to false means dr>
 enabled=true
-
-# Sets the directory where fixed drives will be automatically mounted. This example changes the mount location, so your C-d>
-root = /
-
-# DrvFs-specific options can be specified.
-options = "metadata,uid=1003,gid=1003,umask=077,fmask=11,case=off"
-
-# Sets the `/etc/fstab` file to be processed when a WSL distribution is launched.
+root=/
+options="metadata,uid=1003,gid=1003,umask=077,fmask=11,case=off"
 mountFsTab=true
 
-# Network host settings that enable the DNS server used by WSL 2. This example changes the hostname, sets generateHosts to >
-[network]
-hostname=DemoHost
-generateHosts=false
-generateResolvConf=false
-
-# Set whether WSL supports interop processes like launching Windows apps and adding path variables. Setting these to false >
 [interop]
 enabled=true
 appendWindowsPath=true
-
-# Set the user when launching a distribution with WSL.
-[user]
-default=DemoUser
-
-# Set a command to run when a new WSL instance launches. This example starts the Docker container service.
-[boot]
-command=service docker start
-
 ```
 
 atau bisa didapatkan dari:
@@ -134,7 +121,7 @@ wsl --shutdown
 
 ---
 
-## 📦 4. Install Dependencies
+## 4. Install Dependencies
 
 ### Buka WSL lagi
 
@@ -151,7 +138,7 @@ apt install jq -y
 
 ---
 
-## 💻 5. Setup ZSH (Optional biar Ganteng)
+## 5. Setup ZSH (Optional biar Ganteng)
 
 ### ZSH
 ```bash
@@ -196,7 +183,7 @@ source ~/.zshrc
 
 ---
 
-## 🔐 6. Setup GitHub SSH
+## 6. Setup GitHub SSH
 
 Jalankan:
 _bisa langsung semua ataupun satu per satu_
@@ -224,7 +211,7 @@ Kalo sudah muncul Hi (username Github Kamu), berarti sudah Berhasil dan gas lanj
 
 ---
 
-## 📂 7. Clone Repository
+## 7. Clone Repository
 
 ```bash
 cd ~
@@ -234,7 +221,7 @@ cd boilerplate
 
 ---
 
-## 🔑 8. Setup GitHub Token
+## 8. Setup GitHub Token
 
 Buka:
 https://github.com/settings/tokens
@@ -269,11 +256,11 @@ nano .github-user
 .github-user → username GitHub kamu
 ```
 
-**⚠️ Jangan upload file ini ke GitHub!**
+**Jangan upload file ini ke GitHub!**
 
 ---
 
-## 🚀 9. Jalankan Project
+## 9. Jalankan Project
 
 masuk ke dalam Boilerplate
 ```sh
@@ -292,7 +279,7 @@ lanjut
 ```
 ini disesuaikan sesuai kelas masing-masing, bisa ***crkosongsatu*** atau ***crkosongdua***
 
-**⚠️ Troubleshooting / Kalo terjadi Error**
+**Troubleshooting / Kalo terjadi Error**
 ❌ mkcert tidak ditemukan (install dulu)
 
 ```sh
@@ -378,7 +365,7 @@ export PATH="$PATH:/c/Program Files/VSCode-win32-x64-1.112.0/bin"
 
 ---
 
-## 🚦 10. Masuk ke filenya
+## 10. Masuk ke filenya
 
 ```sh
 cd /root/perkuliahan/crkosongdua
@@ -387,7 +374,7 @@ _pastikan kelasnya sesuai kelas masing-masing_
 
 ---
 
-## 🔄 11. Reload Environment
+## 11. Reload Environment
 
 ```sh
 source /root/.zshrc
@@ -431,7 +418,7 @@ dan hasilnya akan:
 
 ---
 
-## 💻 12. Buka di VS Code
+## 12. Buka di VS Code
 
 Ketik ini di Terminal VS Code atau lanjutin di WSL tadi juga gapapa:
 
@@ -457,7 +444,7 @@ tanggal 13 April 2026 🤩
 
 Penjelasan Tambahan:
 
-## ⚡ 13. Command Shortcut
+## 13. Command Shortcut
 
 _Command Fungsi_
 
@@ -471,7 +458,7 @@ _Command Fungsi_
 
 ---
 
-## 📂 14. Struktur Project
+## 14. Struktur Project
 
 _Folder Fungsi_
 
